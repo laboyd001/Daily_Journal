@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "date": "10/16/2018",
+      "concept": "Data Queries",
+      "entry": "The data practice has been a struggle.  I understand that we use loops to look through the data, but pinpointing where to look in the practice exercise was a real challenge.",
+      "mood": "broken"
+    },
+    {
+      "date": "10/17/2018",
+      "concept": "Building DOM Components",
+      "entry": "We learned how you can store data in JS and then run functions to display the data in the DOM with HTML.  I'm still a little fuzzy on the syntax.",
+      "mood": "happy"
+    },
+    {
+      "date": "10/18/2018",
+      "concept": "Building and Using an API",
+      "entry": "We learned how to build our own API and store data on .JSON servers.  This looked pretty cool.  I'm excited to tap into external APIs soon.",
+      "mood": "optimistic"
+    }
+  ]
+}

@@ -1,24 +1,15 @@
 // Array of journal entries ---------------------------------------
+// 10.22.18: removed the array and put it in entries.json
+// -------------------------------------
 
-const journalEntries = [{
-    date: "10/16/2018",
-    concept: "Data Queries",
-    entry: "The data practice has been a struggle.  I understand that we use loops to look through the data, but pinpointing where to look in the practice exercise was a real challenge.",
-    mood: "broken"
-  },
-  {
-    date: "10/17/2018",
-    concept: "Building DOM Components",
-    entry: "We learned how you can store data in JS and then run functions to display the data in the DOM with HTML.  I'm still a little fuzzy on the syntax.",
-    mood: "happy"
-  },
-  {
-    date: "10/18/2018",
-    concept: "Building and Using an API",
-    entry: "We learned how to build our own API and store data on .JSON servers.  This looked pretty cool.  I'm excited to tap into external APIs soon.",
-    mood: "optimistic"
-  }
-]
+// fetch to query data
+fetch("http://localhost:3000/entries") // Fetch from the API
+    .then((entry) => entry.json() )  // Parse as JSON
+    .then(entries => {
+        // What should happen when we finally have the array?
+      
+    
+
 
 // Push journal entries to the DOM--------------------------------------
 
@@ -55,3 +46,4 @@ const renderJournalEntries = (entries) => {
 // Invoke the render function
 renderJournalEntries(journalEntries)
 
+})
