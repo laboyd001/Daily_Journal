@@ -10,7 +10,6 @@ fetch("http://localhost:3000/entries") // Fetch from the API
 
     parsedEntries.forEach((entry) => {
 
-
       // Push journal entries to the DOM--------------------------------------
 
       const makeJournalEntryComponent = function (journalEntry) {
@@ -26,6 +25,4 @@ fetch("http://localhost:3000/entries") // Fetch from the API
       }
       document.querySelector(".entryLog").innerHTML += makeJournalEntryComponent(parsedEntries);
     })
-
-
   })
