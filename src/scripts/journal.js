@@ -2,27 +2,19 @@
 // 10.22.18: removed the array and put it in entries.json
 // -------------------------------------
 
-// fetch to query data
-fetch("http://localhost:3000/entries") // Fetch from the API
-  .then((journalEntry) => journalEntry.json()) // Parse as JSON
-  .then((parsedEntries) => {
-    // What should happen when we finally have the array?
+// 10.23.18: removed code that fetches DB and translates HTML into the DOM
 
-    parsedEntries.forEach((entry) => {
+// --------------------------------------
 
-      // Push journal entries to the DOM--------------------------------------
 
-      const makeJournalEntryComponent = function (journalEntry) {
-        // Create your own HTML structure for a journal entry
-        return `
-    <div class = "journalEntry">
-     <h1>${entry.concept}</h1>
-     <h2>${entry.date}</h2>
-     <p>${entry.entry}</p>
-     <p>${entry.mood}</p>
-    </div>
-  `
-      }
-      document.querySelector(".entryLog").innerHTML += makeJournalEntryComponent(parsedEntries);
-    })
-  })
+/*
+    Main application logic that uses the functions and objects
+    defined in the other JavaScript files.
+
+    Change the fake variable names below to what they should be
+    to get the data and display it.
+*/
+API.getJournalEntries().then(entries => renderJournalEntries(entries))
+
+
+
