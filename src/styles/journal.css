@@ -10,9 +10,15 @@ body{
   flex-direction: column;
 }
 
+fieldset {
+  color: white;
+}
+
 .entryLog {
   color: white;
 }
+
+
 
 
 
