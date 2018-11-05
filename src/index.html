@@ -11,36 +11,35 @@
 
 <body>
   <h1>Daily Journal</h1>
-  <form action="">
-    <div class="questions">
-      <fieldset>
-        <label for="journalDate">Date of Entry</label>
-        <input type="date" name="journalDate" id="journalDate">
-      </fieldset>
-      <fieldset>
-        <label for="conceptsCovered">Concepts Covered</label>
-        <input type="text" name="conceptsCovered" id="conceptsCovered">
-      </fieldset>
-      <fieldset>
-        <label for="journalEntry">Journal Entry</label>
-        <textarea name="journalEntry" id="journalEntry" rows="20" cols="50">
+
+  <div class="questions">
+    <fieldset id ="date">
+      <label for="journalDate">Date of Entry</label>
+      <input type="date" name="journalDate" id="journalDate">
+    </fieldset>
+    <fieldset id="concept">
+      <label for="conceptsCovered">Concepts Covered</label>
+      <input type="text" name="conceptsCovered" id="conceptsCovered">
+    </fieldset>
+    <fieldset id="entry">
+      <label for="journalEntry">Journal Entry</label>
+      <textarea name="journalEntry" id="journalEntry" rows="20" cols="50">
             </textarea>
-      </fieldset>
-      <fieldset>
-        <label for="dailyMood">Mood for the Day</label>
-        <input list="dailyMood">
-        <datalist id="dailyMood">
-          <option value="happy">Happy>
-          <option value="sad">Sad>
-          <option value="optimistic">Optimistic>
-          <option value="broken">Broken>
-        </datalist>
-      </fieldset>
-    </div>
+    </fieldset>
+    <fieldset id="mood">
+      <label for="dailyMood">Mood for the Day</label>
+      <select id="dailyMood">
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="optimistic">Optimistic</option>
+        <option value="broken">Broken</option>
+      </select>
+    </fieldset>
+  </div>
 
-    <input id="record_button" type="button" value="Record Journal Entry">
+  <input id="record_button" type="button" value="Record Journal Entry">
 
-  </form>
+
   <article class="entryLog">
 
   </article>

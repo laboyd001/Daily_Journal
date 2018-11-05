@@ -20,6 +20,10 @@ API.getJournalEntries().then(entries => renderJournalEntries(entries))
 
 
 let record = document.getElementById("record_button")
+let dateEntry = document.getElementById("date")
+let conceptEntry = document.getElementById("concept") 
+let entryEntry = document.getElementById("entry")
+let moodEntry = document.getElementById("mood")
 
 record.addEventListener("click", saveJournalEntry)
 
@@ -28,6 +32,7 @@ let date = document.getElementById("journalDate").value
 let concept = document.getElementById("conceptsCovered").value
 let entry = document.getElementById("journalEntry").value
 let mood = document.getElementById("dailyMood").value
+
 
 let savedEntry = {
     date: date,
