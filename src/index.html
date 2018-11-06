@@ -13,7 +13,7 @@
   <h1>Daily Journal</h1>
 
   <div class="questions">
-    <fieldset id ="date">
+    <fieldset id="date">
       <label for="journalDate">Date of Entry</label>
       <input type="date" name="journalDate" id="journalDate">
     </fieldset>
@@ -38,6 +38,32 @@
   </div>
 
   <input id="record_button" type="button" value="Record Journal Entry">
+
+  <fieldset id="moodFilter">
+    <legend>Filter Journal Entries by Mood</legend>
+
+
+    <div>
+      <input type="radio" id="happy" name="mood" value="happy" checked />
+      <label for="happy">Happy</label>
+    </div>
+
+    <div>
+      <input type="radio" id="sad" name="mood" value="sad" />
+      <label for="sad">Sad</label>
+    </div>
+
+    <div>
+      <input type="radio" id="optimistic" name="mood" value="optimistic" />
+      <label for="optimistic">Optimistic</label>
+    </div>
+
+    <div>
+      <input type="radio" id="broken" name="mood" value="broken" />
+      <label for="broken">Broken</label>
+    </div>
+
+  </fieldset>
 
   <h2>Saved Journal Entries:</h2>
   <article id="entryLog">
