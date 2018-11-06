@@ -1,8 +1,9 @@
+// contact
 // This is code that creates the journal entry  HTML component
 
-const container = document.querySelector(".entryLog")
 
-const makeJournalEntryComponent = function(entry) {
+
+const makeJournalEntryComponent = (entry) => {
 
         // Create your own HTML structure for a journal entry
         return `
@@ -14,3 +15,5 @@ const makeJournalEntryComponent = function(entry) {
 </div>
 `
     }
+
+//export default makeJournalEntryComponent
