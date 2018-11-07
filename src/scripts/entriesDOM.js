@@ -1,28 +1,28 @@
-
 // contactList
 // This JS file holds code that modifies the DOM
 
 // import API from "./data"
 // import makeJournalEntryComponent from "./entryComponent"
 
-let container = document.getElementById("entryLog")
+const container = document.getElementById("entryLog")
 
-function renderJournalEntries (entries) {
- entries.forEach((entry) => {
-   let div = document.createElement("div")
-   let entryContents = makeJournalEntryComponent(entry)
-   div.innerHTML = entryContents
-   container.appendChild(div);
- });
- }
+// const renderJournalEntries = (entryArray) => {
+//  entryArray.forEach(function (entry) {
+//   let entryComponent;
+//   entryComponent = makeJournalEntryComponent(entry.date, entry.concepts, entry.entry, entry.mood)
+//   container.innerHTML += entryComponent
 
- function clear() {
+//  })
+
+// }
+
+function renderJournalEntries(entries) {
   container.innerHTML = ""
-}
-
-const getMoreEntries = () => {
-  clear ()
-  API.getJournalEntries().then(entries => renderJournalEntries(entries))
+  entries.forEach(entry => {
+    let entryComponent
+    entryComponent = makeJournalEntryComponent(entry.date, entry.concepts, entry.entry, entry.mood)
+    container.innerHTML += entryComponent
+  });
 }
 
 //  export default renderJournalEntries
