@@ -26,3 +26,25 @@ record.addEventListener("click", () => {
   getMoreEntries()
   location.reload()
 })
+
+// ===========================
+
+let radios = document.getElementById("moodFilter")
+
+
+
+console.log(radios.elements["mood"].value)
+
+// radios.addEventListener('click', happy)
+
+// const happy = (() => {
+//   if(radios.value === "happy") {
+//     console.log("I'm happy")
+//   }
+// })
+
+// const sad = (() => {
+//   if(radios.value === "sad") {
+//     console.log("I'm sad")
+//   }
+// })

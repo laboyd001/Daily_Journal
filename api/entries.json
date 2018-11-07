@@ -20,34 +20,6 @@
       "concept": "Building and Using an API",
       "entry": "We learned how to build our own API and store data on .JSON servers.  This looked pretty cool.  I'm excited to tap into external APIs soon.",
       "mood": "optimistic"
-    },
-    {
-      "date": "2018-11-01",
-      "concept": "what",
-      "entry": "happens            ",
-      "mood": "happy",
-      "id": 4
-    },
-    {
-      "date": "2018-11-01",
-      "concept": "what",
-      "entry": "happens            ",
-      "mood": "happy",
-      "id": 5
-    },
-    {
-      "date": "2018-11-08",
-      "concept": "afternoon",
-      "entry": "          make it work  ",
-      "mood": "happy",
-      "id": 6
-    },
-    {
-      "date": "2018-11-01",
-      "concept": "max",
-      "entry": "            hello",
-      "mood": "optimistic",
-      "id": 7
     }
   ]
 }
