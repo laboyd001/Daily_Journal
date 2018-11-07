@@ -4,15 +4,16 @@
 // import API from "./data"
 // import makeJournalEntryComponent from "./entryComponent"
 
-const container = document.getElementById("entryLog")
 
-const renderJournalEntries =(entryArr) => {
-  container.innerHTML = ""
-  entryArr.forEach(function(entry)  {
-    let entryComponent
-    entryComponent = makeJournalEntryComponent(entry.date, entry.concept, entry.entry, entry.mood)
-    container.innerHTML += entryComponent
-  });
+
+const renderJournalEntries = {
+  addRenderedEntry(entries) {
+    let entry = ""
+    entries.forEach((element) => {
+      entry += makeJournalEntryComponent.construct(element)
+    })
+    return entry
+  }
 }
 
 //  export default renderJournalEntries

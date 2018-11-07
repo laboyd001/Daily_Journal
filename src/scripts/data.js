@@ -4,20 +4,24 @@
 
 
 const API = {
-  getJournalEntries: function () {
+  getJournalEntries() {
     return fetch("http://localhost:8088/entries")
       .then(response => response.json())
+      .then((entryData)=> entryData)
   },
-  postJournalEntries: function (toSave) {
-   
-  fetch("http://localhost:8088/entries", {
+ 
+   saveJournalEntry(entry){
+  return fetch("http://localhost:8088/entries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(toSave)
+      body: JSON.stringify(entry)
     })
     console.log("toSave", toSave)
+    .then((data)=> data.json())
+    .then(data => data)
+    .catch(error => `Something happened ${error.message}`)
   }
 }
 

@@ -1,20 +1,24 @@
-
-
-
 /*
     Main application logic that uses the functions and objects
     defined in the other JavaScript files.
 
 */
+const container = document.getElementById("entryLog")
 
+let displayEntry = () => {
+  container.innerHTML = ""
+  API.getJournalEntries().then((newEntry) => {
+    container.insertAdjacentHTML("beforeend", renderJournalEntries.addRenderedEntry(newEntry))
+  })
+}
 
-API.getJournalEntries().then(renderJournalEntries)
+displayEntry()
 
 // In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. When the user clicks the button, you need to create a new entry in your API. The HTTP method that you use to create resources is POST. Guidance on syntax is provided below.
 
 let record = document.getElementById("record_button")
 
-record.addEventListener("click", (event) => {
+record.addEventListener("click", () => {
   let date = document.getElementById("journalDate").value
   let concept = document.getElementById("conceptsCovered").value
   let entry = document.getElementById("journalEntry").value
@@ -26,7 +30,9 @@ record.addEventListener("click", (event) => {
     "entry": entry,
     "mood": mood
   }
-  API.postJournalEntries(savedEntry).then(renderJournalEntries)
+  API.postJournalEntries(savedEntry()).then(() => {
+    displayEntry()
+  })
 })
 
 
