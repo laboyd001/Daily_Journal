@@ -26,7 +26,7 @@ record.addEventListener("click", (event) => {
     "entry": entry,
     "mood": mood
   }
-  API.postJournalEntries(savedEntry).then((newEntry) => renderJournalEntries(newEntry))
+  API.postJournalEntries(savedEntry).then(renderJournalEntries)
 })
 
 

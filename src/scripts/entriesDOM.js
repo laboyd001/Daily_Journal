@@ -6,21 +6,11 @@
 
 const container = document.getElementById("entryLog")
 
-// const renderJournalEntries = (entryArray) => {
-//  entryArray.forEach(function (entry) {
-//   let entryComponent;
-//   entryComponent = makeJournalEntryComponent(entry.date, entry.concepts, entry.entry, entry.mood)
-//   container.innerHTML += entryComponent
-
-//  })
-
-// }
-
-function renderJournalEntries(entries) {
+const renderJournalEntries =(entryArr) => {
   container.innerHTML = ""
-  entries.forEach(entry => {
+  entryArr.forEach(function(entry)  {
     let entryComponent
-    entryComponent = makeJournalEntryComponent(entry.date, entry.concepts, entry.entry, entry.mood)
+    entryComponent = makeJournalEntryComponent(entry.date, entry.concept, entry.entry, entry.mood)
     container.innerHTML += entryComponent
   });
 }

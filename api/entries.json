@@ -20,6 +20,20 @@
       "concept": "Building and Using an API",
       "entry": "We learned how to build our own API and store data on .JSON servers.  This looked pretty cool.  I'm excited to tap into external APIs soon.",
       "mood": "optimistic"
+    },
+    {
+      "date": "2018-11-06",
+      "concept": "Array Methods",
+      "entry": " Practice exercises take a long time to complete.",
+      "mood": "optimistic",
+      "id": 4
+    },
+    {
+      "date": "2018-11-06",
+      "concept": "test",
+      "entry": "test            ",
+      "mood": "happy",
+      "id": 5
     }
   ]
 }
