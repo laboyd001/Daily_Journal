@@ -18,7 +18,6 @@ const API = {
       },
       body: JSON.stringify(entry)
     })
-    console.log("toSave", toSave)
     .then((data)=> data.json())
     .then(data => data)
     .catch(error => `Something happened ${error.message}`)

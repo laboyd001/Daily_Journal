@@ -12,4 +12,8 @@ class Entry {
       mood:this.mood
     }
   }
+
+  save() {
+    return API.saveJournalEntry(this.entryInfo)
+  }
 }

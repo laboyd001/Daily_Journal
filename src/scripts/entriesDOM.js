@@ -6,14 +6,8 @@
 
 
 
-const renderJournalEntries = {
-  addRenderedEntry(entries) {
-    let entry = ""
-    entries.forEach((element) => {
-      entry += makeJournalEntryComponent.construct(element)
-    })
-    return entry
-  }
+const renderJournalEntries = () => {
+  return API.getJournalEntries().then((entries) => entries.map(entry => entryComponent(entry)))
 }
 
 //  export default renderJournalEntries
