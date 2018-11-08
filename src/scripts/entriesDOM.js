@@ -1,13 +1,8 @@
-// contactList
-// This JS file holds code that modifies the DOM
-
-// import API from "./data"
-// import makeJournalEntryComponent from "./entryComponent"
+import entryComponent from "./entryHTML"
+import API from "./data"
 
 
-
-const renderJournalEntries = () => {
+// this function is returning a "GET" fetch and .then taking that data and mapping through all of the objects in the array to create entryComponent => a HTML representation of data
+export default () => {
   return API.getJournalEntries().then((entries) => entries.map(entry => entryComponent(entry)))
 }
-
-//  export default renderJournalEntries

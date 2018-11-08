@@ -1,53 +1,32 @@
-/*
-    Main application logic that uses the functions and objects
-    defined in the other JavaScript files.
+import Entry from "./entryForm"
+import getEntries from "./entriesDOM"
+import render from "./entryRender"
 
-*/
-console.log("howdy")
-renderJournalEntries()
-.then(entryList => entryRender("entryLog", entryList))
 
-// In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. When the user clicks the button, you need to create a new entry in your API. The HTTP method that you use to create resources is POST. Guidance on syntax is provided below.
+// post previously saved entries to dom on page load
+getEntries()
+  .then(entryList => render("entryLog", entryList))
 
+
+
+// add click event to record button then create obj on click, perform "save" method on new entry, then take a snapshot of the updated database and post to dom
 $("#record_button").click(() => {
   const entry = new Entry({
 
     date: $("#journalDate").val(),
     concept: $("#conceptsCovered").val(),
     entry: $("#journalEntry").val(),
-    mood: $("dailyMood").val()
+    mood: $("#dailyMood").val()
   })
 
   entry.save()
     .then((data) => {
       console.log("new entry saved", data)
-      return getJournalEntries()
+      return getEntries()
     })
-    .then(entryList => entryRender("entryLog", entryList))
+    .then(entryList => render("entryLog", entryList))
+  $("#journalDate").val("")
+  $("#conceptsCovered").val("")
+  $("#journalEntry").val("")
+  $("#dailyMood").val("")
 })
-
-
-
-
-
-// ===========================
-
-// let radios = document.getElementById("moodFilter")
-
-
-
-// console.log(radios.elements["mood"].value)
-
-// radios.addEventListener('click', happy)
-
-// const happy = (() => {
-//   if(radios.value === "happy") {
-//     console.log("I'm happy")
-//   }
-// })
-
-// const sad = (() => {
-//   if(radios.value === "sad") {
-//     console.log("I'm sad")
-//   }
-// })

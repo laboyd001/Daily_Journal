@@ -1,8 +1,8 @@
-body{
+body {
   background-image: url(https://images.pexels.com/photos/1459/street-car-vehicle-blur.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .questions {
@@ -15,16 +15,14 @@ fieldset {
   color: white;
 }
 
-h2{
-color:white;
+h2 {
+  color: white;
 }
 
 #entryLog {
   color: white;
 }
 
-
-
-
-
-
+.journalEntry {
+  border: 1px solid red;
+}
