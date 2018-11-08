@@ -1,28 +1,8 @@
+import entryComponent from "./entryHTML"
+import API from "./data"
 
-// contactList
-// This JS file holds code that modifies the DOM
 
-// import API from "./data"
-// import makeJournalEntryComponent from "./entryComponent"
-
-let container = document.getElementById("entryLog")
-
-function renderJournalEntries (entries) {
- entries.forEach((entry) => {
-   let div = document.createElement("div")
-   let entryContents = makeJournalEntryComponent(entry)
-   div.innerHTML = entryContents
-   container.appendChild(div);
- });
- }
-
- function clear() {
-  container.innerHTML = ""
+// this function is returning a "GET" fetch and .then taking that data and mapping through all of the objects in the array to create entryComponent => a HTML representation of data
+export default () => {
+  return API.getJournalEntries().then((entries) => entries.map(entry => entryComponent(entry)))
 }
-
-const getMoreEntries = () => {
-  clear ()
-  API.getJournalEntries().then(entries => renderJournalEntries(entries))
-}
-
-//  export default renderJournalEntries

@@ -1,28 +1,32 @@
-// Array of journal entries ---------------------------------------
-// 10.22.18: removed the array and put it in entries.json
-// -------------------------------------
-
-// 10.23.18: removed code that fetches DB and translates HTML into the DOM
-
-// --------------------------------------
+import Entry from "./entryForm"
+import getEntries from "./entriesDOM"
+import render from "./entryRender"
 
 
-/*
-    Main application logic that uses the functions and objects
-    defined in the other JavaScript files.
+// post previously saved entries to dom on page load
+getEntries()
+  .then(entryList => render("entryLog", entryList))
 
-    Change the fake variable names below to what they should be
-    to get the data and display it.
-*/
 
-getMoreEntries()
 
-// In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form. When the user clicks the button, you need to create a new entry in your API. The HTTP method that you use to create resources is POST. Guidance on syntax is provided below.
+// add click event to record button then create obj on click, perform "save" method on new entry, then take a snapshot of the updated database and post to dom
+$("#record_button").click(() => {
+  const entry = new Entry({
 
-let record = document.getElementById("record_button")
+    date: $("#journalDate").val(),
+    concept: $("#conceptsCovered").val(),
+    entry: $("#journalEntry").val(),
+    mood: $("#dailyMood").val()
+  })
 
-record.addEventListener("click", () => {
-  saveJournalEntry()
-  getMoreEntries()
-  location.reload()
+  entry.save()
+    .then((data) => {
+      console.log("new entry saved", data)
+      return getEntries()
+    })
+    .then(entryList => render("entryLog", entryList))
+  $("#journalDate").val("")
+  $("#conceptsCovered").val("")
+  $("#journalEntry").val("")
+  $("#dailyMood").val("")
 })

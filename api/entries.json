@@ -1,6 +1,5 @@
 {
-  "entries": [
-    {
+  "entries": [{
       "id": 1,
       "date": "10/16/2018",
       "concept": "Data Queries",
@@ -22,32 +21,18 @@
       "mood": "optimistic"
     },
     {
-      "date": "2018-11-01",
-      "concept": "what",
-      "entry": "happens            ",
-      "mood": "happy",
+      "date": "2018-11-06",
+      "concept": "Array Methods",
+      "entry": " Practice exercises take a long time to complete.",
+      "mood": "optimistic",
       "id": 4
     },
     {
-      "date": "2018-11-01",
-      "concept": "what",
-      "entry": "happens            ",
-      "mood": "happy",
+      "concept": "Browserify",
+      "date": "2018-11-07",
+      "entry": "Finally figured this thing out!!            ",
+      "mood": "Happy",
       "id": 5
-    },
-    {
-      "date": "2018-11-08",
-      "concept": "afternoon",
-      "entry": "          make it work  ",
-      "mood": "happy",
-      "id": 6
-    },
-    {
-      "date": "2018-11-01",
-      "concept": "max",
-      "entry": "            hello",
-      "mood": "optimistic",
-      "id": 7
     }
   ]
 }
