@@ -2,8 +2,8 @@
 
 
 
-export default (element, components) => {
-  const $container = $(`#${element}`)
-  $container.empty().append(components)
+// export default (element, components) => {
+//   const $container = $(`#${element}`)
+//   $container.empty().append(components)
 
-}
+// }

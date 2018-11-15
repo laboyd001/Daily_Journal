@@ -2,28 +2,49 @@
 // This JS file directs us to the data
 
 
-export default {
 
-  // getJournalEntries performs a "GET" fetch to the entries DB
-  getJournalEntries() {
-    return fetch("http://localhost:8088/entries")
+const journalUrl = "http://localhost:8088/entries"
+// getJournalEntries performs a "GET" fetch to the entries DB
+const journalDataManager = {
+  getJournalEntries: () => {
+    return fetch(`${journalUrl}`)
       // translate to javascript
-      .then(response => response.json())
-      // .then below to get data later
-      .then((entryData) => entryData)
+      .then(journalData => journalData.json())
   },
 
   // saveJournalEntry performs a fetch "POST", .then converts data to javascript, .then hoists it up to be available for a later function
-  saveJournalEntry(entry) {
-    return fetch("http://localhost:8088/entries", {
+  saveJournalEntry: (entry) => {
+    return fetch(`${journalUrl}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify(entry)
       })
-      .then((data) => data.json())
-      .then(data => data)
-      .catch(error => `Something happened ${error.message}`)
+      .then((journalData) => journalData.json())
+  },
+
+  deleteJournalEntry: (id) => {
+    return fetch(`${journalUrl}/${id}`, {
+      method: "DELETE"
+    }).then(journalData => journalData.json())
+  },
+
+  journalEditEntry: (entry, id) => {
+    return fetch(`${journalUrl}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(entry)
+    }).then(journalData => journalData())
+  },
+
+  journalSingleEntry: (id) => {
+    return fetch(`${journalUrl}/${id}`)
+      .then(journalData => journalData())
   }
 }
+
+
+export default journalDataManager
