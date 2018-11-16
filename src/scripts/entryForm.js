@@ -1,32 +1,38 @@
-
 const journalFormManager = {
   journalHtmlForm: () => {
     return `
     
-    <div class="questions">
-    <fieldset id="date">
-      <label for="journalDate">Date of Entry</label>
-      <input type="date" name="journalDate" id="journalDate">
-    </fieldset>
-    <fieldset id="concept">
-      <label for="conceptsCovered">Concepts Covered</label>
-      <input type="text" name="conceptsCovered" id="conceptsCovered">
-    </fieldset>
-    <fieldset id="entry">
-      <label for="journalEntry">Journal Entry</label>
-      <textarea name="journalEntry" id="journalEntry" rows="20" cols="50">
-            </textarea>
-    </fieldset>
-    <fieldset id="mood">
-      <label for="dailyMood">Mood for the Day</label>
+  <div class="questions">
+
+    <div class="input-field">
+      <h4>Date of Entry:</h4><br>
+      <input type="text" class="datepicker" placeholder="Pick a Day" id="journalDate">
+    </div>
+
+    <div class="input-field">
+      <h4>Concepts Covered:</h4><br>
+      <input type="text" placeholder="Give it a Title" id="conceptsCovered">
+    </div>
+
+    <div class="input-field">
+    <h4>Journal Entry:</h4><br>
+      <textarea id="journalEntry" class="materialize-textarea" rows="20" cols="50">
+      </textarea> 
+    </div>
+
+    <div class="input-field col s12">
+    <h4>Your Mood:</h4><br>
       <select id="dailyMood">
+        <option value="" disabled selected></option>
         <option value="Happy">Happy</option>
         <option value="Sad">Sad</option>
         <option value="Optimistic">Optimistic</option>
         <option value="Broken">Broken</option>
       </select>
-    </fieldset>
-  </div><br>
+      </div>
+
+  </div>
+  <br>
 
   <input id="record_button" type="button" value="Record Journal Entry"><br><br>
 

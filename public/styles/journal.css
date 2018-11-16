@@ -7,12 +7,9 @@ body {
 
 .questions {
   display: flex;
+  align-items: center;
   flex-direction: column;
-  color: white;
-}
-
-fieldset {
-  color: white;
+  color: teal;
 }
 
 h2 {
@@ -24,6 +21,21 @@ h2 {
 }
 
 .journalEntry {
-  border: 1px solid red;
+  border: 1px solid mediumaquamarine;
 }
+
+.journalForm {
+  color: aquamarine;
+}
+
+h4 {
+  text-align: center;
+}
+
+legend {
+  color: mediumaquamarine;
+  font-size: 2rem;
+}
+
+
 
