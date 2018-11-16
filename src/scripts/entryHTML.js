@@ -4,8 +4,8 @@
 const journalHTMLEntry = (entry) => {
     return `
             <div class = "journalEntry">
-                <h2>${entry.concept}</h2>
-                <h3>Date: ${entry.date}</h3>
+                <h4>${entry.concept}</h4>
+                <h5>Date: ${entry.date}</h5>
                 <p>Entry: <br>${entry.entry}</p>
                 <p>Mood Today: <br>${entry.mood}</p>
             </div><br> 
