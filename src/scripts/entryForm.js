@@ -1,4 +1,3 @@
-import journalDataManager from "./data"
 
 const journalFormManager = {
   journalHtmlForm: () => {
@@ -27,14 +26,14 @@ const journalFormManager = {
         <option value="Broken">Broken</option>
       </select>
     </fieldset>
-  </div>
+  </div><br>
 
-  <input id="record_button" type="button" value="Record Journal Entry">
+  <input id="record_button" type="button" value="Record Journal Entry"><br><br>
 
     
     `
   },
-  newsClearForm: () => {
+  journalClearForm: () => {
     document.querySelector("#journalDate").value = ""
     document.querySelector("#conceptsCovered").value = ""
     document.querySelector("#journalEntry").value = ""
