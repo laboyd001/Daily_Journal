@@ -6,7 +6,7 @@ import journalMoodFilter from "./moodFilter";
 
 const journal = () => {
   document.querySelector("#journalForm").innerHTML = journalFormManager.journalHtmlForm()
-  document.querySelector("#moodFilter").innerHTML = journalMoodFilter()
+  // document.querySelector("#moodFilter").innerHTML = journalMoodFilter()
   journalDomRender()
   saveJournal()
 }

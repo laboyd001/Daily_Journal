@@ -7,12 +7,12 @@ const journalUrl = "http://localhost:8088/entries"
 // getJournalEntries performs a "GET" fetch to the entries DB
 const journalDataManager = {
   getJournalEntries: () => {
-    return fetch(`${journalUrl}?_sort=date&_order=desc&_expand=mood`)
+    return fetch(`${journalUrl}?_expand=mood`)
       // translate to javascript
       .then(journalData => journalData.json())
-      .then( (entries) => {
-        console.log("entries", entries)
-      }
+      // .then((bigJournalData) =>{
+      //   console.log("journalData", bigJournalData)
+      // })
   },
 
   // saveJournalEntry performs a fetch "POST", .then converts data to javascript, .then hoists it up to be available for a later function
