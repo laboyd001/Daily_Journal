@@ -7,7 +7,6 @@ const journalHTMLEntry = (entry) => {
                 <h4>${entry.concept}</h4>
                 <h5>Date: ${entry.date}</h5>
                 <p>Entry: <br>${entry.entry}</p>
-                <p>Mood Today: <br>${entry.mood}</p>
             </div><br> 
             `
 }
@@ -15,3 +14,6 @@ const journalHTMLEntry = (entry) => {
 
 
 export default journalHTMLEntry
+
+
+/* <p>Mood Today: <br>${entry.mood.label}</p> */

@@ -1,10 +1,11 @@
 const journalMoodFilter = () => {
   return `
   <legend>Filter Journal Entries by Mood</legend>
-  <div>
-  <input type="radio" id="happy" name="mood" value="happy" />
-  <label for="happy">Happy</label>
-</div>
+  <p>
+    
+      <input class="with-gap" type="radio" id="happy" name="mood" value="happy" />
+      <label for="happy">Happy</label>
+  </p>
 
 <div>
   <input type="radio" id="sad" name="mood" value="sad" checked />

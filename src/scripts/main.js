@@ -1,5 +1,6 @@
 console.log("hi")
 
+
 import journal from "./journal"
 
 journal()
