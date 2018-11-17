@@ -1,28 +1,53 @@
-import API from "./data"
+const journalFormManager = {
+  journalHtmlForm: () => {
+    return `
+    
+  <div class="questions">
 
-// class of Entry to construct the properties of the entry object for the database
-class Entry {
-  constructor(props) {
-    this.concept = props.concept
-    this.date = props.date
-    this.entry = props.entry
-    this.mood = props.mood
-  }
+    <div class="input-field">
+      <h4>Date of Entry:</h4><br>
+      <input type="text" class="datepicker" placeholder="Pick a Day" id="journalFormDate">
+    </div>
 
-  // the getter called entryInfo returns an obj with the specified values
-  get entryInfo() {
-    return {
-      concept: this.concept,
-      date: this.date,
-      entry: this.entry,
-      mood: this.mood
-    }
-  }
+    <div class="input-field">
+      <h4>Concepts Covered:</h4><br>
+      <input type="text" placeholder="Give it a Title" id="conceptsCovered">
+    </div>
 
-  // a save method declared below to post new entries to the DB
-  save() {
-    return API.saveJournalEntry(this.entryInfo)
+    <div class="input-field">
+    <h4>Journal Entry:</h4><br>
+      <textarea id="journalEntry" class="materialize-textarea" rows="20" cols="50">
+      </textarea> 
+    </div>
+
+    <div class="input-field col s12">
+    <h4>Your Mood:</h4><br>
+      <select id="dailyMood">
+        <option value="" disabled selected></option>
+        <option value="Happy">Happy</option>
+        <option value="Sad">Sad</option>
+        <option value="Optimistic">Optimistic</option>
+        <option value="Broken">Broken</option>
+      </select>
+      </div>
+
+  </div>
+  <br>
+
+  <button id="record_button" class="btn waves-effect waves-light" type="submit" name="action">SUBMIT
+  <i class="material-icons right"></i>
+  </button><br><br>
+
+    
+    `
+  },
+  journalClearForm: () => {
+    document.querySelector("#journalFormDate").value = ""
+    document.querySelector("#conceptsCovered").value = ""
+    document.querySelector("#journalEntry").value = ""
+    document.querySelector("#dailyMood").value = ""
+
   }
 }
 
-export default Entry
+export default journalFormManager

@@ -1,38 +1,64 @@
 {
-  "entries": [{
+  "entries": [
+    {
       "id": 1,
       "date": "10/16/2018",
       "concept": "Data Queries",
       "entry": "The data practice has been a struggle.  I understand that we use loops to look through the data, but pinpointing where to look in the practice exercise was a real challenge.",
-      "mood": "broken"
+      "moodId": 4
     },
     {
       "id": 2,
       "date": "10/17/2018",
       "concept": "Building DOM Components",
       "entry": "We learned how you can store data in JS and then run functions to display the data in the DOM with HTML.  I'm still a little fuzzy on the syntax.",
-      "mood": "happy"
+      "moodId": 1
     },
     {
       "id": 3,
       "date": "10/18/2018",
       "concept": "Building and Using an API",
       "entry": "We learned how to build our own API and store data on .JSON servers.  This looked pretty cool.  I'm excited to tap into external APIs soon.",
-      "mood": "optimistic"
+      "moodId": 3
     },
     {
       "date": "2018-11-06",
       "concept": "Array Methods",
       "entry": " Practice exercises take a long time to complete.",
-      "mood": "optimistic",
+      "moodId": 3,
       "id": 4
     },
     {
       "concept": "Browserify",
       "date": "2018-11-07",
       "entry": "Finally figured this thing out!!            ",
-      "mood": "Happy",
+      "moodId": 1,
       "id": 5
+    },
+    {
+      "date": "Saturday Nov 17, 2018",
+      "concept": "Started React",
+      "entry": "So far I like it!      ",
+      "moodId": 1,
+      "id": 6
+    }
+  ],
+  "mood": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Sad"
+    },
+    {
+      "id": 3,
+      "label": "Optimistic"
+    },
+    {
+      "id": 4,
+      "label": "Broken"
     }
   ]
 }

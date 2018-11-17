@@ -21,7 +21,7 @@ module.exports = {
       }
   },
   dailyjournal: {
-      src: ["../scripts/journal.js"],
+      src: ["../scripts/main.js"],
       dest: "../../public/bundle.js"
   }
 }
