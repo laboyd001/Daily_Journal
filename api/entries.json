@@ -1,5 +1,6 @@
 {
-  "entries": [{
+  "entries": [
+    {
       "id": 1,
       "date": "10/16/2018",
       "concept": "Data Queries",
@@ -33,6 +34,20 @@
       "entry": "Finally figured this thing out!!            ",
       "mood": "Happy",
       "id": 5
+    },
+    {
+      "date": "Saturday Nov 17, 2018",
+      "concept": "Started React",
+      "entry": "      So far I like it",
+      "mood": "Happy",
+      "id": 6
+    },
+    {
+      "date": "Saturday Nov 17, 2018",
+      "concept": "Started React",
+      "entry": "So far I like it!      ",
+      "mood": "Happy",
+      "id": 7
     }
   ]
 }

@@ -9,10 +9,10 @@ const saveJournal = () => {
     const entry = document.querySelector("#journalEntry").value
     const mood = document.querySelector("#dailyMood").value
 
-    if (!journalDate || !journalConcept || !journalEntry || !journalMood) {
+    if (!date || !concept || !entry || !mood) {
       alert("You missed a box")
     } else {
-      document.querySelector("entryLog").innerHTML = ""
+      document.querySelector("#entryLog").innerHTML = ""
       const journalEntry = {
         date: date,
         concept: concept,

@@ -6,7 +6,7 @@ const journalFormManager = {
 
     <div class="input-field">
       <h4>Date of Entry:</h4><br>
-      <input type="text" class="datepicker" placeholder="Pick a Day" id="journalDate">
+      <input type="text" class="datepicker" placeholder="Pick a Day" id="journalFormDate">
     </div>
 
     <div class="input-field">
@@ -40,7 +40,7 @@ const journalFormManager = {
     `
   },
   journalClearForm: () => {
-    document.querySelector("#journalDate").value = ""
+    document.querySelector("#journalFormDate").value = ""
     document.querySelector("#conceptsCovered").value = ""
     document.querySelector("#journalEntry").value = ""
   }
