@@ -9,7 +9,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: teal;
 }
 
 h2 {
@@ -24,18 +23,29 @@ h2 {
   border: 1px solid mediumaquamarine;
 }
 
-.journalForm {
-  color: aquamarine;
-}
-
 h4 {
   text-align: center;
+  color: white;
 }
 
 legend {
   color: mediumaquamarine;
   font-size: 2rem;
 }
+
+input, select, textarea{
+  color: white;
+}
+
+.btn {
+  display:block;
+  text-align: center;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+
 
 
 

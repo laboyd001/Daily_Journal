@@ -49,5 +49,25 @@
       "mood": "Happy",
       "id": 7
     }
+  ],
+
+  "moods": [
+    {
+      "id":1,
+      "label": "Happy"
+    },
+    {
+      "id":2,
+      "label": "Sad"
+    },
+    {
+      "id":3,
+      "label": "Optimistic"
+    },
+    {
+      "id":4,
+      "label": "Broken"
+    }
   ]
+  
 }

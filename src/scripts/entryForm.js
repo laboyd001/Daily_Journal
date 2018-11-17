@@ -34,7 +34,9 @@ const journalFormManager = {
   </div>
   <br>
 
-  <input id="record_button" type="button" value="Record Journal Entry"><br><br>
+  <button id="record_button" class="btn waves-effect waves-light" type="submit" name="action">SUBMIT
+  <i class="material-icons right"></i>
+  </button><br><br>
 
     
     `
@@ -43,6 +45,8 @@ const journalFormManager = {
     document.querySelector("#journalFormDate").value = ""
     document.querySelector("#conceptsCovered").value = ""
     document.querySelector("#journalEntry").value = ""
+    document.querySelector("#dailyMood").value = ""
+
   }
 }
 
